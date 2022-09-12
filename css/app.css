@@ -36,6 +36,10 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   color: #000080;
+  background-color: #F1D98B;
+  text-align: center;
+  font-size: 2em;
+  font-family: 'combo';
 }
 
 /* A elements that don't have a class get default styles */
@@ -72,4 +76,22 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+img {
+  height: 500px;
+  width:500px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.border {
+  border-style: dotted;
+  border-width: 5px;
+  color: #000080;
 }
