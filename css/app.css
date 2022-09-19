@@ -31,15 +31,24 @@ html:focus-within {
 }
 
 /* Set core body defaults */
+
+:root {
+  --gutter: 1rem;
+}
+
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  display: grid;
+  gap: var(--gutter, 1rem);
   color: #000080;
   background-color: #F1D98B;
   text-align: center;
   font-size: 2em;
   font-family: 'combo';
+  padding-top: 1rem;
+  font-size: clamp(1rem, 0.5rem +2.5vw, 2rem);
 }
 
 /* A elements that don't have a class get default styles */
@@ -52,6 +61,10 @@ img,
 picture {
   max-width: 100%;
   display: block;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -78,19 +91,18 @@ select {
   }
 }
 
-img {
-  height: 500px;
-  width:500px;
-}
-
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: min(90%, 40rem);
+  border-radius: 10%;
 }
 
 .border {
+  width: min(100% - 2rem, var(--container-max, 40ch));
+  margin-left: auto;
+  margin-right: auto;
   border-style: dotted;
   border-width: 5px;
   color: #000080;
